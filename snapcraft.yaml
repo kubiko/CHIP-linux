@@ -1,6 +1,6 @@
-name: snappyv44
+name: chip-kernel
 version: 4.4.0
-summary: A generic amd64 kernel built from source
+summary: A generic kernel built from source
 description: This is a generic kernel for amd64 / kvm built using x86_64_defconfig plus the minimal snappy config changes
 type: kernel
 
@@ -9,7 +9,7 @@ parts:
     plugin: kernel
     source: .
     source-type: git
-    kdefconfig: [x86_64_defconfig, snappy/generic.config, snappy/security.config, snappy/systemd.config, snappy/snappy.config, snappy/containers.config]
+    kdefconfig: [sunxi_defconfig, snappy/generic.config, snappy/security.config, snappy/systemd.config, snappy/snappy.config, snappy/containers.config]
     kconfigs:
       - CONFIG_LOCALVERSION="-stable-4.4.y"
     kernel-image-target: bzImage
